@@ -31,7 +31,7 @@ CONTEXT=catalyst
 OBJECTTYPE=catalyst-article
 LOGMSG=QAUTO-5818-generated
 BTCOUNT=2  # how many of each broad topic to select each time
-MINCOUNT=2
+MINCOUNT=3
 TMPFILE=/tmp/$( basename $0 .sh).$$
 GTTEMP=/tmp/gt-$( basename $0 .sh).$$
 
@@ -81,7 +81,7 @@ do
       cat $TMPFILE | jq .facets.broadTopic.facetValues | sed -e /count/d |  tr -d '{"[}],' | cut -d : -f 2 | sed -e '/^ *$/d' -e 's/^ //' | tr ' ' + | shuf -n $BTCOUNT | while read BROADTOPIC
       do
 	  SORTBY=$( sortBy $COUNT )
-	  echo '"'$CONTEXT'","'$OBJECTTYPE'","'$ALLWORDS'","'$SEARCHWITHIN'","'$ARTICLETYPE'","'$GRANULARTOPIC'","'$BROADTOPIC'","'$DATEARG'","'AUTHOR'","'$AUTHORANDOR'",1,1,1,1,100,"'$SORTBY'","Y","'$JOURNAL'","short","'$LOGMSG"-no-"$COUNT"-total-"$TOTAL'"'
+	  echo '"'$CONTEXT'","'$OBJECTTYPE'","'$ALLWORDS'","'$SEARCHWITHIN'","'$ARTICLETYPE'","'$GRANULARTOPIC'","'$BROADTOPIC'","'$DATEARG'","'$AUTHOR'","'$AUTHORANDOR'",1,1,1,1,100,"'$SORTBY'","Y","'$JOURNAL'","short","'$LOGMSG"-no-"$COUNT"-total-"$TOTAL'"'
 
 	  # also output the same line with Article since that's almost certain to work too 
 	#  if [ $ARTICLETYPE != Article ] ; then 
