@@ -1,0 +1,10 @@
+context,objectType,allWords,searchWithin,articleType,granularTopic,broadTopic,date,author,authorAndOr,volume,issue,page,startPage,pageLength,sortBy,showFacets,journal,showResult,logmsg
+"catalyst","catalyst-article","","","In+Depth","cat-gt-004","null","past10Years","","",1,1,1,1,100,"pubdate-descending","Y","catalyst","short","QAUTO-5818-generated-no-3-total-10"
+"catalyst","catalyst-article","","","Conversation","cat-gt-004","null","past5Years","","",1,1,1,1,100,"citedByCount-descending","Y","cat-non-issue","short","QAUTO-5818-generated-no-6-total-4"
+"catalyst","catalyst-article","","","Article","cat-gt-004","null","past10Years","","",1,1,1,1,100,"Oldest","Y","carryover","short","QAUTO-5818-generated-no-20-total-25"
+"catalyst","catalyst-article","","","Article","cat-gt-004","null","past5Years","","",1,1,1,1,100,"pubdate-ascending","Y","","short","QAUTO-5818-generated-no-21-total-23"
+"catalyst","catalyst-article","","","Article","cat-gt-001","null","past10Years","","",1,1,1,1,100,"pubdate-ascending","Y","carryover","short","QAUTO-5818-generated-no-61-total-76"
+"catalyst","catalyst-article","","","Article","cat-gt-001","null","past10Years","","",1,1,1,1,100,"citedByCount-descending","Y","","short","QAUTO-5818-generated-no-62-total-76"
+"catalyst","catalyst-article","","","Article","cat-gt-002","null","past10Years","","",1,1,1,1,100,"Most+Cited","Y","catalyst","short","QAUTO-5818-generated-no-63-total-5"
+"catalyst","catalyst-article","","","Article","cat-gt-002","null","past5Years","","",1,1,1,1,100,"Latest","Y","carryover","short","QAUTO-5818-generated-no-90-total-19"
+"catalyst","catalyst-article","","","Article","cat-gt-002","null","past5Years","","",1,1,1,1,100,"pubdate-descending","Y","","short","QAUTO-5818-generated-no-91-total-24"
