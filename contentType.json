@@ -2,619 +2,83 @@
   "contentType": [
     {
       "value": "Article",
-      "label": "article"
+      "label": "article",
+      "semanticCode": "article"
     },
     {
       "value": "Brief Article",
-      "label": "brief-article"
+      "label": "brief article",
+      "semanticCode": "brief-article"
     },
     {
       "value": "Case Study",
-      "label": "case-study"
+      "label": "case study",
+      "semanticCode": "case-study"
     },
     {
       "value": "Correction",
-      "label": "correction"
+      "label": "correction",
+      "semanticCode": "correction"
     },
     {
       "value": "Clip",
-      "label": "clip"
+      "label": "clip",
+      "semanticCode": "clip"
     },
     {
       "value": "Conversation",
-      "label": "conversation"
+      "label": "conversation",
+      "semanticCode": "conversation"
     },
     {
       "value": "From the Editors",
-      "label": "from-the-editors"
+      "label": "from the editors",
+      "semanticCode": "from-the-editors"
     },
     {
       "value": "In Depth",
-      "label": "in-depth"
+      "label": "in depth",
+      "semanticCode": "in-depth"
     },
     {
       "value": "Insights Report",
-      "label": "insights-report"
+      "label": "insights report",
+      "semanticCode": "insights-report"
     },
     {
       "value": "Insights Interview",
-      "label": "insights-interview"
+      "label": "insights interview",
+      "semanticCode": "insights-interview"
     },
     {
       "value": "Retraction",
-      "label": "retraction"
+      "label": "retraction",
+      "semanticCode": "retraction"
     },
     {
       "value": "Review Article",
-      "label": "review-article"
+      "label": "review article",
+      "semanticCode": "review-article"
     },
     {
       "value": "Survey Snapshot",
-      "label": "survey-snapshot"
+      "label": "survey snapshot",
+      "semanticCode": "survey-snapshot"
     },
     {
       "value": "Talk",
-      "label": "talk"
+      "label": "talk",
+      "semanticCode": "talk"
     },
     {
-      "value": "Viewpoints from Optum",
-      "label": "viewpoints-from-optum"
+      "value": "Viewpoints",
+      "label": "viewpoints",
+      "semanticCode": "viewpoints"
     },
     {
       "value": "Commentary",
-      "label": "commentary"
-    },
-    {
-      "label": "original-article",
-      "value": "Original Article"
-    },
-    {
-      "label": "brief-report",
-      "value": "Brief Reports"
-    },
-    {
-      "label": "case-report",
-      "value": "Case Report"
-    },
-    {
-      "label": "collection",
-      "value": "Collection"
-    },
-    {
-      "label": "letter",
-      "value": "Letter"
-    },
-    {
-      "label": "oration",
-      "value": "Oration"
-    },
-    {
-      "label": "other",
-      "value": "Other"
-    },
-    {
-      "label": "research-article",
-      "value": "Research Article"
-    },
-    {
-      "label": "special-report",
-      "value": "Special Report"
-    },
-    {
-      "label": "new-instruments",
-      "value": "New Instruments"
-    },
-    {
-      "label": "original-and-selected-communications",
-      "value": "Original and Selected Communications"
-    },
-    {
-      "label": "original-communications",
-      "value": "Original Communications"
-    },
-    {
-      "label": "papers-and-discussions",
-      "value": "Papers and Discussions"
-    },
-    {
-      "label": "selected-papers",
-      "value": "Selected Papers"
-    },
-    {
-      "label": "short-communications",
-      "value": "Short Communications"
-    },
-    {
-      "label": "clinical-therapeutics",
-      "value": "Clinical Therapeutics"
-    },
-    {
-      "label": "review-article",
-      "value": "Review Article"
-    },
-    {
-      "label": "videos-in-clinical-medicine",
-      "value": "Videos in Clinical Medicine"
-    },
-    {
-      "label": "statistics-in-medicine",
-      "value": "Statistics in Medicine"
-    },
-    {
-      "label": "basic-science-for-clinicians",
-      "value": "Basic Science for Clinicians"
-    },
-    {
-      "label": "control-of-communicable-diseases-in-massachusetts",
-      "value": "Control of Communicable Diseases in Massachusetts"
-    },
-    {
-      "label": "fifty-years-of-medical-progress",
-      "value": "Fifty Years of Medical Progress"
-    },
-    {
-      "label": "mechanisms-of-disease",
-      "value": "Mechanisms of Disease"
-    },
-    {
-      "label": "medical-intelligence",
-      "value": "Medical Intelligence"
-    },
-    {
-      "label": "medical-progress",
-      "value": "Medical Progress"
-    },
-    {
-      "label": "molecular-medicine",
-      "value": "Molecular Medicine"
-    },
-    {
-      "label": "new-england-surgical-society",
-      "value": "New England Surgical Society"
-    },
-    {
-      "label": "physiology-in-medicine",
-      "value": "Physiology in Medicine"
-    },
-    {
-      "label": "public-health-rounds-hsph",
-      "value": "Public-Health Rounds at the Harvard School of Public Health"
-    },
-    {
-      "label": "reports-and-notices-of-meetings",
-      "value": "Reports and Notices of Meetings"
-    },
-    {
-      "label": "reports-of-meetings",
-      "value": "Reports of Meetings"
-    },
-    {
-      "label": "saturday-surgical-seminar",
-      "value": "Saturday Surgical Seminar, Peter Bent Brigham Hospital"
-    },
-    {
-      "label": "seminars-in-medicine-beth-israel-hospital",
-      "value": "Seminars in Medicine of the Beth Israel Hospital, Boston"
-    },
-    {
-      "label": "statistics-in-practice",
-      "value": "Statistics in Practice"
-    },
-    {
-      "label": "therapeutic-and-preventive-medicine",
-      "value": "Therapeutic and Preventive Medicine"
-    },
-    {
-      "label": "therapeutic-memoranda",
-      "value": "Therapeutic Memoranda"
-    },
-    {
-      "label": "perspective",
-      "value": "Perspective"
-    },
-    {
-      "label": "clinical-problem-solving",
-      "value": "Clinical Problem-Solving"
-    },
-    {
-      "label": "case-records-of-the-massachusetts-general-hospital",
-      "value": "Case Records of the Massachusetts General Hospital"
-    },
-    {
-      "label": "boston-city-hospital-staff-clinical-meeting",
-      "value": "Boston City Hospital Staff Clinical Meeting"
-    },
-    {
-      "label": "case-records-of-the-faulkner-hospital",
-      "value": "Case Records of the Faulkner Hospital"
-    },
-    {
-      "label": "clinical-department",
-      "value": "Clinical Department"
-    },
-    {
-      "label": "clinical-lecture",
-      "value": "Clinical Lecture"
-    },
-    {
-      "label": "clinical-memorandum",
-      "value": "Clinical Memorandum"
-    },
-    {
-      "label": "clinical-note",
-      "value": "Clinical Note"
-    },
-    {
-      "label": "hospital-practice-and-clinical-memoranda",
-      "value": "Hospital Practice and Clinical Memoranda"
-    },
-    {
-      "label": "hospital-reports",
-      "value": "Hospital Reports"
-    },
-    {
-      "label": "images-in-clinical-medicine",
-      "value": "Images in Clinical Medicine"
-    },
-    {
-      "label": "interactive-medical-case",
-      "value": "Interactive Medical Case"
-    },
-    {
-      "label": "reports-of-cases",
-      "value": "Reports of Cases"
-    },
-    {
-      "label": "university-of-kansas-medical-center",
-      "value": "Clinicopathological Exercise, University of Kansas Medical Center"
-    },
-    {
-      "label": "clinical-decisions",
-      "value": "Clinical Decisions"
-    },
-    {
-      "label": "clinical-implications-of-basic-research",
-      "value": "Clinical Implications of Basic Research"
-    },
-    {
-      "label": "editorial",
-      "value": "Editorial"
-    },
-    {
-      "label": "health-law-ethics-and-human-rights",
-      "value": "Health Law, Ethics, and Human Rights"
-    },
-    {
-      "label": "health-policy-2001",
-      "value": "Health Policy 2001"
-    },
-    {
-      "label": "health-policy-report",
-      "value": "Health Policy Report"
-    },
-    {
-      "label": "legal-issues-in-medicine",
-      "value": "Legal Issues in Medicine"
-    },
-    {
-      "label": "retraction",
-      "value": "Retraction"
-    },
-    {
-      "label": "sounding-board",
-      "value": "Sounding Board"
-    },
-    {
-      "label": "clinical-debate",
-      "value": "Clinical Debate"
-    },
-    {
-      "label": "quality-of-health-care",
-      "value": "Quality of Health Care"
-    },
-    {
-      "label": "a-hundred-years-ago",
-      "value": "A Hundred Years Ago"
-    },
-    {
-      "label": "american-medical-biography",
-      "value": "American Medical Biography"
-    },
-    {
-      "label": "boston-medical-library",
-      "value": "Boston Medical Library"
-    },
-    {
-      "label": "editorial-retrospective",
-      "value": "Editorial Retrospective"
-    },
-    {
-      "label": "editorials-and-medical-intelligence",
-      "value": "Editorials and Medical Intelligence"
-    },
-    {
-      "label": "intelligence",
-      "value": "Intelligence"
-    },
-    {
-      "label": "medical-eponym",
-      "value": "Medical Eponym"
-    },
-    {
-      "label": "medical-history",
-      "value": "Medical History"
-    },
-    {
-      "label": "medical-miscellany",
-      "value": "Medical Miscellany"
-    },
-    {
-      "label": "medical-notes",
-      "value": "Medical Notes"
-    },
-    {
-      "label": "medicine-and-society",
-      "value": "Medicine and Society"
-    },
-    {
-      "label": "medicine-and-public-affairs",
-      "value": "Medicine and Public Affairs"
-    },
-    {
-      "label": "miscellaneous-notices",
-      "value": "Miscellaneous Notices"
-    },
-    {
-      "label": "obituary",
-      "value": "Obituary"
-    },
-    {
-      "label": "occasional-notes",
-      "value": "Occasional Notes"
-    },
-    {
-      "label": "selections-from-medical-journals",
-      "value": "Selections from Medical Journals"
-    },
-    {
-      "label": "the-doctors-saddle-bag",
-      "value": "The Doctor's Saddle Bag"
-    },
-    {
-      "label": "washington-report",
-      "value": "Washington Report"
-    },
-    {
-      "label": "other-points-of-view",
-      "value": "Other Points of View"
-    },
-    {
-      "label": "book-review",
-      "value": "Book Review"
-    },
-    {
-      "label": "correspondence",
-      "value": "Correspondence"
-    },
-    {
-      "label": "correction",
-      "value": "Correction"
-    },
-    {
-      "label": "bibliographical-notices",
-      "value": "Bibliographical Notices"
-    },
-    {
-      "label": "other-points-of-view",
-      "value": "Other Points of View"
-    },
-    {
-      "label": "monthly-notice-of-new-publications",
-      "value": "Monthly Notice of New Publications"
-    },
-    {
-      "label": "recent-literature",
-      "value": "Recent Literature"
-    },
-    {
-      "label": "other-points-of-view",
-      "value": "Other Points of View"
-    },
-    {
-      "label": "address",
-      "value": "Address"
-    },
-    {
-      "label": "lecture",
-      "value": "Lecture"
-    },
-    {
-      "label": "army-medical-intelligence",
-      "value": "Army Medical Intelligence"
-    },
-    {
-      "label": "blue-cross-blue-shield",
-      "value": "Blue Cross Blue Shield"
-    },
-    {
-      "label": "books-received",
-      "value": "Books Received"
-    },
-    {
-      "label": "boston-medical-library",
-      "value": "Boston Medical Library"
-    },
-    {
-      "label": "connecticut-department-of-health",
-      "value": "Connecticut Department of Health"
-    },
-    {
-      "label": "harvard-medical-school",
-      "value": "Harvard Medical School"
-    },
-    {
-      "label": "information-for-authors",
-      "value": "Information for Authors"
-    },
-    {
-      "label": "legislative-notes",
-      "value": "Legislative Notes"
-    },
-    {
-      "label": "massachusetts-department-of-public-health",
-      "value": "Massachusetts Department of Public Health"
-    },
-    {
-      "label": "massachusetts-medical-society",
-      "value": "Massachusetts Medical Society"
-    },
-    {
-      "label": "medical-diary-of-the-week",
-      "value": "Medical Diary of the Week"
-    },
-    {
-      "label": "medicolegal-abstract",
-      "value": "Medicolegal Abstract"
-    },
-    {
-      "label": "meteorological-record",
-      "value": "Meteorological Record"
-    },
-    {
-      "label": "miscellany",
-      "value": "Miscellany"
-    },
-    {
-      "label": "new-england-medical-council",
-      "value": "New England Medical Council"
-    },
-    {
-      "label": "new-hampshire-medical-society",
-      "value": "New Hampshire Medical Society"
-    },
-    {
-      "label": "news-items",
-      "value": "News Items"
-    },
-    {
-      "label": "nonclinical-notes",
-      "value": "Nonclinical Notes"
-    },
-    {
-      "label": "notes-and-queries",
-      "value": "Notes and Queries"
-    },
-    {
-      "label": "notes-from-the-medical-examiner",
-      "value": "Notes from the Medical Examiner"
-    },
-    {
-      "label": "notices",
-      "value": "Notices"
-    },
-    {
-      "label": "random-reports",
-      "value": "Random Reports"
-    },
-    {
-      "label": "recent-deaths",
-      "value": "Recent Deaths"
-    },
-    {
-      "label": "record-of-mortality",
-      "value": "Record of Mortality"
-    },
-    {
-      "label": "report-of-meeting",
-      "value": "Report of Meeting"
-    },
-    {
-      "label": "this-weeks-issue",
-      "value": "This Week's Issue"
-    },
-    {
-      "label": "vermont-state-medical-society",
-      "value": "Vermont State Medical Society"
-    },
-    {
-      "label": "war-activities",
-      "value": "War Activities"
-    },
-    {
-      "label": "figure",
-      "value": "Figure"
-    },
-    {
-      "label": "table",
-      "value": "Table"
-    },
-    {
-      "label": "images-in-clinical-medicine",
-      "value": "Images in Clinical Medicine"
-    },
-    {
-      "label": "audio-summary",
-      "value": "Audio Summary"
-    },
-    {
-      "label": "video",
-      "value": "Video"
-    },
-    {
-      "label": "audio-interview",
-      "value": "Audio Interview"
-    },
-    {
-      "label": "clinical-practice-articles",
-      "value": "Clinical Practice Articles"
-    },
-    {
-      "label": "videos-in-clinical-medicine",
-      "value": "Videos in Clinical Medicine"
-    },
-    {
-      "label": "interactive-graphic",
-      "value": "Interactive Graphic"
-    },
-    {
-      "label": "animation",
-      "value": "Animation"
-    },
-    {
-      "label": "interactive-map",
-      "value": "Interactive Map"
-    },
-    {
-      "label": "slideshow",
-      "value": "Slide Show"
-    },
-    {
-      "label": "reader-comments",
-      "value": "Reader Comments"
-    },
-    {
-      "label": "interactive-medical-case",
-      "value": "Interactive Medical Case"
-    },
-    {
-      "label": "video-roundtable",
-      "value": "Video Roundtable"
-    },
-    {
-      "label": "video-interview",
-      "value": "Video Interview"
-    },
-    {
-      "label": "interactive-timeline",
-      "value": "Interactive Timeline"
-    },
-    {
-      "label": "poll-results",
-      "value": "Poll Results"
-    },
-    {
-      "label": "audio",
-      "value": "Audio"
+      "label": "commentary",
+      "semanticCode": "commentary"
     }
   ]
 }
