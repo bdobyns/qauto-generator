@@ -4,8 +4,6 @@ set -e
 # catalyst,catalyst-article,value,Article,Value-Based Care,Alternative Payment Models (APM),past10Years,1,100,relevance,Y,carryover,short,COM-5818_automation test
 PS4='$LINENO: '
 
-echo "context,objectType,query,articleType,granularTopic,broadTopic,date,startPage,pageLength,sortBy,showFacets,journal,showResult,logmsg"
-
 # context and objectType are fixed
 CONTEXT=catalyst
 OBJECTTYPE=catalyst-article
@@ -71,6 +69,9 @@ sortBy() {
 
 # ----- MAIN LOOP --------------------------------------------------
 
+# output the header row
+echo "context,objectType,query,articleType,granularTopic,broadTopic,date,startPage,pageLength,sortBy,showFacets,journal,showResult,logmsg"
+
 # start of the main loop
 COUNT=0
 # this gets all the labels, values, semantic codes out of the granularTopic json
@@ -117,7 +118,16 @@ do
       cat $TMPFILE | jq .facets.broadTopic.facetValues | sed -e /count/d |  tr -d '{"[}],' | cut -d : -f 2 | sed -e '/^ *$/d' -e 's/^ //' | tr ' ' + | shuf -n $BTCOUNT | while read BROADTOPIC
       do
 	  SORTBY=$( sortBy $COUNT )
-	  echo '"'$CONTEXT'","'$OBJECTTYPE'","'$QUERY'","'$ARTICLETYPE'","'$GRANULARTOPIC'","'$BROADTOPIC'","'$DATEARG'",1,100,"'$SORTBY'","Y","'$JOURNAL'","short","'$LOGMSG"-no-"$COUNT"-total-"$TOTAL'"'
+	  STARTPAGE=1
+	  PAGELENGTH=100
+	  SHOWFACETS=Y
+	  SHOWRESULT=short
+	  #  echo '"'$CONTEXT'","'$OBJECTTYPE'","'$QUERY'","'$ARTICLETYPE'","'$GRANULARTOPIC'","'$BROADTOPIC'","'$DATEARG'",1,100,"'$SORTBY'","Y","'$JOURNAL'","short","'$LOGMSG"-no-"$COUNT"-total-"$TOTAL'"'
+	  if [ $QUOTES == quotes ] ; then
+	      echo '"'$CONTEXT'","'$OBJECTTYPE'","'$QUERY'","'$ARTICLETYPE'","'$GRANULARTOPIC'","'$BROADTOPIC'","'$DATEARG'","'$STARTPAGE','$PAGELENGTH',"'$SORTBY'","'$SHOWFACETS'","'$JOURNAL'","'$SHOWRESULT'","'$LOGMSG"-no-"$COUNT"-total-"$TOTAL'"'
+	  else
+	      echo $CONTEXT','$OBJECTTYPE','$QUERY','$ARTICLETYPE','$GRANULARTOPIC','$BROADTOPIC','$DATEARG','$STARTPAGE','$PAGELENGTH','$SORTBY','$SHOWFACETS','$JOURNAL','$SHOWRESULT','${LOGMSG}-no-${COUNT}-total-${TOTAL}
+	  fi
 
 	  # also output the same line with Article since that's almost certain to work too 
 	#  if [ $ARTICLETYPE != Article ] ; then 

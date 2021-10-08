@@ -4,6 +4,7 @@
 * it takes as arguments `-h -u -k` just like the acceptance test (so you can use `$DEVCREDENTIALS` the same way)
 * it also takes `-i filename` to get granularTopics.json
 * it takes `-a` or `-s` to use /advanced or /simple search
+* also takes `-q` to produce output without quotes
 * `barry-qauto-5818-data-generator.sh $DEVCREDENTIALS -i granularTopics.json | tee filename.csv`
 
 # barry-qauto-5818-runner.sh
