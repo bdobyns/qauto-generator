@@ -19,7 +19,7 @@ QNAME=query
 
 # ------ ARGUMENT PROCESSING ----------------------------------------
 
-while getopts i:h:u:k:qa:s: opt 
+while getopts i:h:u:k:qas opt 
 do
     case "$opt" in
 	i)  INPUTFILE="$OPTARG" ;;
