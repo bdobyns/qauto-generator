@@ -11,3 +11,7 @@
 * takes the same arguments, but processes a csv file to make sure it works.
 * barry-qauto-5818-runner.sh $DEVCREDENTIALS -i filename.csv | tee filtered.csv
 * also takes -q to produce output without quotes
+
+# Makefile
+
+run `make update` to update the json files
