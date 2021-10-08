@@ -6,6 +6,54 @@ PS4='$LINENO: '
 
 echo "context,objectType,query,articleType,granularTopic,broadTopic,date,startPage,pageLength,sortBy,showFacets,journal,showResult,logmsg"
 
+# context and objectType are fixed
+CONTEXT=catalyst
+OBJECTTYPE=catalyst-article
+LOGMSG=QAUTO-5818-generated
+BTCOUNT=2  # how many of each broad topic to select each time
+MINCOUNT=2
+TMPFILE=/tmp/$( basename $0 .sh).$$
+GTTEMP=/tmp/gt-$( basename $0 .sh).$$
+ENDPOINT=simple
+QNAME=query
+
+# ------ ARGUMENT PROCESSING ----------------------------------------
+
+while getopts i:h:u:k:qa:s: opt 
+do
+    case "$opt" in
+	i)  INPUTFILE="$OPTARG" ;;
+	h)  HOST="$OPTARG" ;;
+	k)  APIKEY="$OPTARG" ;;
+	u)  APIUSER="$OPTARG" ;;
+	q)  QUOTES=noquotes ;;
+
+	a)  ENDPOINT=advanced
+	    QNAME=allwords ;;
+	s)  ENDPOINT=simple
+	    QNAME=query ;;
+    esac
+done
+
+if [ -z $INPUTFILE ] ; then
+    echo ERROR you must give a filename of the csv -i filename
+    exit 1
+elif [ ! -e $INPUTFILE ] ; then
+    echo ERROR "'$INPUTFILE'" does not exist so, bummer.
+    exit 2
+elif [ -z $HOST ] ; then
+    echo ERROR you must specify a hostname -h hostname
+    exit 3
+elif [ -k $APIKEY ] ; then
+    echo ERROR you must specify an API Key -k apikey
+    exit 4
+elif [ -u $APIUSER ] ; then
+    echo ERROR you must specify an API User -u apiuser
+    exit 5
+fi
+
+# ----- METHODS --------------------------------------------------
+
 sortBy() {
     COUNT=$1
     CMOD=$[ $COUNT % 8 ]
@@ -21,24 +69,12 @@ sortBy() {
     esac
 }
 
-if [ ! -e granularTopic.json ] ; then
-    echo ERROR: need granularTopic.json locally
-    exit 9
-fi
-
-# context and objectType are fixed
-CONTEXT=catalyst
-OBJECTTYPE=catalyst-article
-LOGMSG=QAUTO-5818-generated
-BTCOUNT=2  # how many of each broad topic to select each time
-MINCOUNT=2
-TMPFILE=/tmp/$( basename $0 .sh).$$
-GTTEMP=/tmp/gt-$( basename $0 .sh).$$
+# ----- MAIN LOOP --------------------------------------------------
 
 # start of the main loop
 COUNT=0
 # this gets all the labels, values, semantic codes out of the granularTopic json
-cat granularTopic.json | tr -d '{"[}],' | cut -d : -f 2 | sed -e '/^ *$/d' -e 's/^ //' | tr ' ' '+' >$GTTEMP
+cat $INPUTFILE | tr -d '{"[}],' | cut -d : -f 2 | sed -e '/^ *$/d' -e 's/^ //' | tr ' ' '+' >$GTTEMP
 ( echo cat-gt-004 ; grep ^cat $GTTEMP ; grep -v ^cat $GTTEMP ) | while read GRANULARTOPIC
 do
   # check in both the catalyst and carryover journals.  we don't really care about the cat-non-issue and viewpoints
@@ -55,13 +91,13 @@ do
        do
 	# actually make a call to get the facets
 	curl -H 'accept: application/json' -H 'apikey: 2A330F24-889C-4B9D-82C9-BE891CC2D60C'  -H 'apiuser: onesearch_tests_run' -s -m 60 -X 'GET' \
-	     'https://onesearch-api.nejmgroup-qa.org/api/v1/simple?context='$CONTEXT'&objectType='$OBJECTTYPE'&query='$QUERY'&articleType='$ARTICLETYPE'&granularTopic='$GRANULARTOPIC'&date='$DATEARG'&journal='$JOURNAL'&showFacets=y' >$TMPFILE
+	     'https://onesearch-api.nejmgroup-qa.org/api/v1/'$ENDPOINT'?context='$CONTEXT'&objectType='$OBJECTTYPE'&'$QNAME'='$QUERY'&articleType='$ARTICLETYPE'&granularTopic='$GRANULARTOPIC'&date='$DATEARG'&journal='$JOURNAL'&showFacets=y' >$TMPFILE
 
 	# ignore combinations that give us no results for the articleType / granularTopic / journal combination
 	TOTAL=$( cat $TMPFILE | jq .total | sed -e 's/"//' )
 	if [ $TOTAL == null ] ; then 
 	    echo curl -H 'accept: application/json' -H 'apikey: 2A330F24-889C-4B9D-82C9-BE891CC2D60C'  -H 'apiuser: onesearch_tests_run' -s -m 60 -X 'GET' \
-		 'https://onesearch-api.nejmgroup-qa.org/api/v1/simple?context='$CONTEXT'&objectType='$OBJECTTYPE'&query='$QUERY'&articleType='$ARTICLETYPE'&granularTopic='$GRANULARTOPIC'&date='$DATEARG'&journal='$JOURNAL'&showFacets=y' >&2
+		 'https://onesearch-api.nejmgroup-qa.org/api/v1/'$ENDPOINT'?context='$CONTEXT'&objectType='$OBJECTTYPE'&'$QNAME'='$QUERY'&articleType='$ARTICLETYPE'&granularTopic='$GRANULARTOPIC'&date='$DATEARG'&journal='$JOURNAL'&showFacets=y' >&2
 	    cat >&2 $TMPFILE ; echo "" >&2
 	    continue
 	elif [ $TOTAL -le $MINCOUNT ] ; then

@@ -7,10 +7,12 @@ DEBUGGING=0
 COUNT=0
 INPUTFILE=granularTopic.json
 QUOTES=quotes
+ENDPOINT=simple
+QNAME=query
 
 # ------ ARGUMENT PROCESSING ----------------------------------------
 
-while getopts i:h:u:k:q opt 
+while getopts i:h:u:k:qa:s: opt 
 do
     case "$opt" in
 	i)  INPUTFILE="$OPTARG" ;;
@@ -18,6 +20,11 @@ do
 	k)  APIKEY="$OPTARG" ;;
 	u)  APIUSER="$OPTARG" ;;
 	q)  QUOTES=noquotes ;;
+
+	a)  ENDPOINT=advanced
+	    QNAME=allwords ;;
+	s)  ENDPOINT=simple
+	    QNAME=query ;;
     esac
 done
 
@@ -50,12 +57,12 @@ do
       fi
   else
     curl -H 'accept: application/json' -H 'apikey: '$APIKEY  -H 'apiuser: '$APIUSER -s -m 60 -X 'GET' \
-	 'https://'$HOST'/api/v1/simple?context='$CONTEXT'&objectType='$OBJECTTYPE'&query='$QUERY'&articleType='$ARTICLETYPE'&granularTopic='$GRANULARTOPIC'&date='$DATEARG'&journal='$JOURNAL'&showFacets='$SHOWFACETS'&startPage='$STARTPAGE'&pageLength='$PAGELENGTH'&logMsg='$LOGMSG >$TMPFILE
+	 'https://'$HOST'/api/v1/'$ENDPOINT'?context='$CONTEXT'&objectType='$OBJECTTYPE'&'$QNAME'='$QUERY'&articleType='$ARTICLETYPE'&granularTopic='$GRANULARTOPIC'&date='$DATEARG'&journal='$JOURNAL'&showFacets='$SHOWFACETS'&startPage='$STARTPAGE'&pageLength='$PAGELENGTH'&logMsg='$LOGMSG >$TMPFILE
     TOTAL=$( cat $TMPFILE | jq .total | sed -e 's/"//' )
     if [ -z $TOTAL ] || [ $TOTAL == null ] ; then 
 	if [ $DEBUGGING -eq 1 ] ; then
 	    echo curl -H 'accept: application/json' -H 'apikey: 2A330F24-889C-4B9D-82C9-BE891CC2D60C'  -H 'apiuser: onesearch_tests_run' -s -m 60 -X 'GET' \
-		 'https://onesearch-api.nejmgroup-qa.org/api/v1/simple?context='$CONTEXT'&objectType='$OBJECTTYPE'&query='$QUERY'&articleType='$ARTICLETYPE'&granularTopic='$GRANULARTOPIC'&date='$DATEARG'&journal='$JOURNAL'&showFacets='$SHOWFACETS'&startPage='$STARTPAGE'&pageLength='$PAGELENGTH'&logMsg='$LOGMSG >$TMPFILE
+		 'https://onesearch-api.nejmgroup-qa.org/api/v1/'$ENDPOINT'?context='$CONTEXT'&objectType='$OBJECTTYPE'&'$QNAME'='$QUERY'&articleType='$ARTICLETYPE'&granularTopic='$GRANULARTOPIC'&date='$DATEARG'&journal='$JOURNAL'&showFacets='$SHOWFACETS'&startPage='$STARTPAGE'&pageLength='$PAGELENGTH'&logMsg='$LOGMSG >$TMPFILE
 	    cat >&2 $TMPFILE ; echo "" >&2
 	else
 	    echo FAILED >&2 $CONTEXT $OBJECTTYPE $QUERY $ARTICLETYPE $GRANULARTOPIC $BROADTOPIC $DATEARG $STARTPAGE $PAGELENGTH $SORTBY $SHOWFACETS $JOURNAL $SHOWRESULT $LOGMSG
