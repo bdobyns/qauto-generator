@@ -1,0 +1,64 @@
+{
+  "ptopic": [
+    {
+      "label": "Drug and Device Safety",
+      "value": "1",
+      "semanticCode": "drug-and-device-safety"
+    },
+    {
+      "label": "Essays",
+      "value": "2",
+      "semanticCode": "essays"
+    },
+    {
+      "label": "Focus on Research",
+      "value": "3",
+      "semanticCode": "focus-on-research"
+    },
+    {
+      "label": "Global Health",
+      "value": "4",
+      "semanticCode": "global-health"
+    },
+    {
+      "label": "Health Policy",
+      "value": "5",
+      "semanticCode": "health-policy"
+    },
+    {
+      "label": "Medical Education",
+      "value": "6",
+      "semanticCode": "medical-education"
+    },
+    {
+      "label": "Medical Ethics and Human Rights",
+      "value": "7",
+      "semanticCode": "medical-ethics-and-human-rights"
+    },
+    {
+      "label": "Medical Practice",
+      "value": "8",
+      "semanticCode": "medical-practice"
+    },
+    {
+      "label": "Medicine and Business",
+      "value": "9",
+      "semanticCode": "medicine-and-business"
+    },
+    {
+      "label": "Medicine and the Law",
+      "value": "10",
+      "semanticCode": "medicine-and-the-law"
+    },
+    {
+      "label": "Public Health",
+      "value": "11",
+      "semanticCode": "public-health"
+    },
+    {
+      "label": "History of Medicine",
+      "value": "12",
+      "semanticCode": "history-of-medicine"
+    }
+  ]
+}

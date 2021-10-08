@@ -1,0 +1,16 @@
+{
+  "apiuser": [
+    {
+      "label": "one-search-nejm-atypon",
+      "value": "one-search-nejm-atypon"
+    },
+    {
+      "label": "one-search-catalyst-atypon",
+      "value": "one-search-catalyst-atypon"
+    },
+    {
+      "label": "one-search-mms-federated",
+      "value": "one-search-mms-federated"
+    }
+  ]
+}

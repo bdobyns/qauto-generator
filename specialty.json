@@ -1,0 +1,139 @@
+{
+  "specialty": [
+    {
+      "label": "Neurology/Neurosurgery",
+      "value": "1",
+      "semanticCode": "neurology-neurosurgery"
+    },
+    {
+      "label": "Hematology/Oncology",
+      "value": "2",
+      "semanticCode": "hematology-oncology"
+    },
+    {
+      "label": "Surgery",
+      "value": "3",
+      "semanticCode": "surgery"
+    },
+    {
+      "label": "Pediatrics",
+      "value": "4",
+      "semanticCode": "pediatrics"
+    },
+    {
+      "label": "Dermatology",
+      "value": "5",
+      "semanticCode": "dermatology"
+    },
+    {
+      "label": "Endocrinology",
+      "value": "6",
+      "semanticCode": "endocrinology"
+    },
+    {
+      "label": "Psychiatry",
+      "value": "7",
+      "semanticCode": "psychiatry"
+    },
+    {
+      "label": "Nephrology",
+      "value": "8",
+      "semanticCode": "nephrology"
+    },
+    {
+      "label": "Rheumatology",
+      "value": "9",
+      "semanticCode": "rheumatology"
+    },
+    {
+      "label": "Emergency Medicine",
+      "value": "10",
+      "semanticCode": "emergency-medicine"
+    },
+    {
+      "label": "Gastroenterology",
+      "value": "11",
+      "semanticCode": "gastroenterology"
+    },
+    {
+      "label": "Pulmonary/Critical Care",
+      "value": "12",
+      "semanticCode": "pulmonary-critical-care"
+    },
+    {
+      "label": "Genetics",
+      "value": "13",
+      "semanticCode": "genetics"
+    },
+    {
+      "label": "Cardiology",
+      "value": "14",
+      "semanticCode": "cardiology"
+    },
+    {
+      "label": "Geriatrics/Aging",
+      "value": "15",
+      "semanticCode": "geriatrics-aging"
+    },
+    {
+      "label": "Obstetrics/Gynecology",
+      "value": "16",
+      "semanticCode": "obstetrics-gynecology"
+    },
+    {
+      "label": "Infectious Disease",
+      "value": "18",
+      "semanticCode": "infectious-disease"
+    },
+    {
+      "label": "Allergy/Immunology",
+      "value": "19",
+      "semanticCode": "allergy-immunology"
+    },
+    {
+      "label": "Ophthalmology",
+      "value": "20",
+      "semanticCode": "ophthalmology"
+    },
+    {
+      "label": "Otolaryngology",
+      "value": "21",
+      "semanticCode": "otolaryngology"
+    },
+    {
+      "label": "Orthopedics",
+      "value": "22",
+      "semanticCode": "orthopedics"
+    },
+    {
+      "label": "Urology/Prostate Disease",
+      "value": "23",
+      "semanticCode": "urology-prostate-disease"
+    },
+    {
+      "label": "Health Policy and Reform",
+      "value": "24",
+      "semanticCode": "health-policy"
+    },
+    {
+      "label": "Medical Statistics",
+      "value": "25",
+      "semanticCode": "medical-statistics"
+    },
+    {
+      "label": "Medical Practice, Training, and Education",
+      "value": "26",
+      "semanticCode": "medical-practice-training-and-education"
+    },
+    {
+      "label": "Medical Ethics",
+      "value": "27",
+      "semanticCode": "medical-ethics"
+    },
+    {
+      "label": "Primary Care/Hospitalist",
+      "value": "28",
+      "semanticCode": "primary-care-hospitalist"
+    }
+  ]
+}

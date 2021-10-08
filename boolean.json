@@ -1,0 +1,32 @@
+{
+  "boolean": [
+    {
+      "label": "Y",
+      "value": "y",
+      "semanticCode": "yes",
+      "alias1": "t",
+      "alias2": "T"
+    },
+    {
+      "label": "N",
+      "value": "n",
+      "semanticCode": "no",
+      "alias1": "f",
+      "alias2": "F"
+    },
+    {
+      "label": "1",
+      "value": "y",
+      "semanticCode": "true",
+      "alias1": "True",
+      "alias2": ""
+    },
+    {
+      "label": "0",
+      "value": "n",
+      "semanticCode": "false",
+      "alias1": "False",
+      "alias2": "nil"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "sortBy": [
+    {
+      "label": "Most Relevant",
+      "value": "relevance"
+    },
+    {
+      "label": "Latest",
+      "value": "pubdate-descending"
+    },
+    {
+      "label": "Oldest",
+      "value": "pubdate-ascending"
+    },
+    {
+      "label": "Most Cited",
+      "value": "citedByCount-descending"
+    }
+  ]
+}

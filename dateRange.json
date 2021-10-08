@@ -1,0 +1,28 @@
+{
+  "dateRange": [
+    {
+      "label": "past30Days",
+      "value": "1month"
+    },
+    {
+      "label": "past6Months",
+      "value": "6months"
+    },
+    {
+      "label": "pastYear",
+      "value": "1year"
+    },
+    {
+      "label": "past5Years",
+      "value": "5years"
+    },
+    {
+      "label": "past10Years",
+      "value": "10years"
+    },
+    {
+      "label": "Custom",
+      "value": "custom"
+    }
+  ]
+}

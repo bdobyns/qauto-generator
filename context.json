@@ -1,0 +1,28 @@
+{
+  "context": [
+    {
+      "label": "NEJM",
+      "value": "nejm"
+    },
+    {
+      "label": "Nejm",
+      "value": "nejm"
+    },
+    {
+      "label": "Catalyst",
+      "value": "catalyst"
+    },
+    {
+      "label": "CATALYST",
+      "value": "catalyst"
+    },
+    {
+      "label": "Nejm_Catalyst",
+      "value": "nejm_catalyst"
+    },
+    {
+      "label": "nejm_catalyst",
+      "value": "nejm_catalyst"
+    }
+  ]
+}

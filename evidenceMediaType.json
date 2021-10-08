@@ -1,0 +1,39 @@
+{
+  "evidenceMediaType": [
+    {
+      "value": "Figure",
+      "label": "figure",
+      "semanticCode": "figure"
+    },
+    {
+      "value": "Table",
+      "label": "table",
+      "semanticCode": "table"
+    },
+    {
+      "value": "Quick Take",
+      "label": "quick take",
+      "semanticCode": "quick-take"
+    },
+    {
+      "value": "Stats, STAT!",
+      "label": "stats, stat!",
+      "semanticCode": "stats-stat"
+    },
+    {
+      "value": "Visual Abstract",
+      "label": "visual abstract",
+      "semanticCode": "visual-abstract"
+    },
+    {
+      "value": "Trial by Fire",
+      "label": "trial by fire",
+      "semanticCode": "trial-by-fire"
+    },
+    {
+      "value": "Research Summary",
+      "label": "research summary",
+      "semanticCode": "research-summary"
+    }
+  ]
+}

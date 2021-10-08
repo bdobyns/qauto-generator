@@ -1,0 +1,29 @@
+{
+  "evidenceArticleCategory": [
+    {
+      "value": "cases",
+      "label": "Cases",
+      "semanticCode": "cases"
+    },
+    {
+      "value": "commentary",
+      "label": "Commentary",
+      "semanticCode": "commentary"
+    },
+    {
+      "value": "research",
+      "label": "Research",
+      "semanticCode": "research"
+    },
+    {
+      "value": "review",
+      "label": "Review",
+      "semanticCode": "review"
+    },
+    {
+      "value": "other",
+      "label": "Other",
+      "semanticCode": "other"
+    }
+  ]
+}

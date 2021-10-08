@@ -1,0 +1,79 @@
+{
+  "mediaType": [
+    {
+      "value": "Figure",
+      "label": "figure",
+      "semanticCode": "figure"
+    },
+    {
+      "value": "Table",
+      "label": "table",
+      "semanticCode": "table"
+    },
+    {
+      "value": "Quick Take",
+      "label": "quick take",
+      "semanticCode": "quick-take"
+    },
+    {
+      "value": "Audio Summary",
+      "label": "audio summary",
+      "semanticCode": "audio-summary"
+    },
+    {
+      "value": "Audio",
+      "label": "audio",
+      "semanticCode": "audio"
+    },
+    {
+      "value": "Video",
+      "label": "video",
+      "semanticCode": "video"
+    },
+    {
+      "value": "Audio Interview",
+      "label": "audio interview",
+      "semanticCode": "audio-interview"
+    },
+    {
+      "value": "Interactive Medical Case",
+      "label": "interactive medical case",
+      "semanticCode": "interactive-medical-case"
+    },
+    {
+      "value": "Interactive Graphic",
+      "label": "interactive graphic",
+      "semanticCode": "interactive-graphic"
+    },
+    {
+      "value": "Videos in Clinical Medicine",
+      "label": "videos in clinical medicine",
+      "semanticCode": "videos-in-clinical-medicine"
+    },
+    {
+      "value": "Clinical Practice Articles",
+      "label": "clinical practice articles",
+      "semanticCode": "clinical-practice-articles"
+    },
+    {
+      "value": "Visual Abstract",
+      "label": "visual abstract",
+      "semanticCode": "visual-abstract"
+    },
+    {
+      "value": "Animation",
+      "label": "animation",
+      "semanticCode": "animation"
+    },
+    {
+      "value": "Images in Clinical Medicine",
+      "label": "images in clinical medicine",
+      "semanticCode": "images-in-clinical-medicine"
+    },
+    {
+      "value": "Interactive Timeline",
+      "label": "interactive timeline",
+      "semanticCode": "interactive-timeline"
+    }
+  ]
+}

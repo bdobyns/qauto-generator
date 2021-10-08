@@ -1,0 +1,74 @@
+{
+  "evidenceArticleType": [
+    {
+      "value": "Clinical Trials Case Study",
+      "label": "clinical trials case study",
+      "semanticCode": "clinical-trials-case-study"
+    },
+    {
+      "value": "Tomorrow's Trial",
+      "label": "tomorrow's trial",
+      "semanticCode": "tomorrows-trial"
+    },
+    {
+      "value": "Morning Report",
+      "label": "morning report",
+      "semanticCode": "morning-report"
+    },
+    {
+      "value": "Editorial",
+      "label": "editorial",
+      "semanticCode": "editorial"
+    },
+    {
+      "value": "Patient Platform",
+      "label": "patient platform",
+      "semanticCode": "patient-platform"
+    },
+    {
+      "value": "Original Article",
+      "label": "original article",
+      "semanticCode": "original-article"
+    },
+    {
+      "value": "Review Article",
+      "label": "review article",
+      "semanticCode": "review-article"
+    },
+    {
+      "value": "Concise Review",
+      "label": "concise review",
+      "semanticCode": "concise-review"
+    },
+    {
+      "value": "Systematic Review",
+      "label": "systematic review",
+      "semanticCode": "systematic-review"
+    },
+    {
+      "value": "Curbside Consult",
+      "label": "curbside consult",
+      "semanticCode": "curbside-consult"
+    },
+    {
+      "value": "Statistical Review",
+      "label": "Statistical Review",
+      "semanticCode": "statistical-review"
+    },
+    {
+      "value": "Clinical Trials Workshop",
+      "label": "clinical trials workshop",
+      "semanticCode": "clinical-trials-workshop"
+    },
+    {
+      "value": "Correction",
+      "label": "correction",
+      "semanticCode": "correction"
+    },
+    {
+      "value": "Retraction",
+      "label": "retraction",
+      "semanticCode": "retraction"
+    }
+  ]
+}

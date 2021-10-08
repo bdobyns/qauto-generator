@@ -1,0 +1,595 @@
+{
+  "articleType": [
+    {
+      "value": "Miscellany",
+      "label": "miscellany",
+      "semanticCode": "miscellany"
+    },
+    {
+      "value": "Books Received",
+      "label": "books Received",
+      "semanticCode": "books-received"
+    },
+    {
+      "value": "Editorials and Medical Intelligence",
+      "label": "editorials and medical intelligence",
+      "semanticCode": "editorials-and-medical-intelligence"
+    },
+    {
+      "value": "Special Article",
+      "label": "special article",
+      "semanticCode": "special-article"
+    },
+    {
+      "value": "Book Review",
+      "label": "book review",
+      "semanticCode": "book-review"
+    },
+    {
+      "value": "Review Article",
+      "label": "review article",
+      "semanticCode": "review-article"
+    },
+    {
+      "value": "Original Article",
+      "label": "original article",
+      "semanticCode": "original-article"
+    },
+    {
+      "value": "Notices",
+      "label": "notices",
+      "semanticCode": "notices"
+    },
+    {
+      "value": "Editorial",
+      "label": "editorial",
+      "semanticCode": "editorial"
+    },
+    {
+      "value": "Case Records of the Massachusetts General Hospital",
+      "label": "case records of the massachusetts general hospital",
+      "semanticCode": "case-records-of-the-massachusetts-general-hospital"
+    },
+    {
+      "value": "Recent Literature",
+      "label": "recent Literature",
+      "semanticCode": "recent-literature"
+    },
+    {
+      "value": "Recent Deaths",
+      "label": "recent deaths",
+      "semanticCode": "recent-deaths"
+    },
+    {
+      "value": "Correspondence",
+      "label": "correspondence",
+      "semanticCode": "correspondence"
+    },
+    {
+      "value": "Clinical Implications of Basic Research",
+      "label": "clinical implications of basic research",
+      "semanticCode": "clinical-implications-of-basic-research"
+    },
+    {
+      "value": "Original and Selected Communications",
+      "label": "original and selected communications",
+      "semanticCode": "original-and-selected-communications"
+    },
+    {
+      "value": "Clinical Problem-Solving",
+      "label": "clinical problem-solving",
+      "semanticCode": "clinical-problem-solving"
+    },
+    {
+      "value": "Massachusetts Department of Public Health",
+      "label": "massachusetts department of public health",
+      "semanticCode": "massachusetts-department-of-public-health"
+    },
+    {
+      "value": "Medical Intelligence",
+      "label": "medical intelligence",
+      "semanticCode": "medical-intelligence"
+    },
+    {
+      "value": "Reports of Meetings",
+      "label": "reports of meetings",
+      "semanticCode": "reports-of-meetings"
+    },
+    {
+      "value": "Sounding Board",
+      "label": "sounding board",
+      "semanticCode": "sounding-board"
+    },
+    {
+      "value": "Record of Mortality",
+      "label": "record of mortality",
+      "semanticCode": "record-of-mortality"
+    },
+    {
+      "value": "Perspective",
+      "label": "perspective",
+      "semanticCode": "perspective"
+    },
+    {
+      "value": "Special Report",
+      "label": "special report",
+      "semanticCode": "special-report"
+    },
+    {
+      "value": "Medical Notes",
+      "label": "medical notes",
+      "semanticCode": "medical-notes"
+    },
+    {
+      "value": "Papers and Discussions",
+      "label": "papers and discussions",
+      "semanticCode": "papers-and-discussions"
+    },
+    {
+      "value": "Correction",
+      "label": "correction",
+      "semanticCode": "correction"
+    },
+    {
+      "value": "Massachusetts Medical Society",
+      "label": "massachusetts medical society",
+      "semanticCode": "massachusetts-medical-society",
+      "alias1": "MASSACHUSETTS MEDICAL SOCIETY"
+    },
+    {
+      "value": "Medical Progress",
+      "label": "medical progress",
+      "semanticCode": "medical-progress"
+    },
+    {
+      "value": "Boston Medical Library",
+      "label": "boston medical library",
+      "semanticCode": "boston-medical-library"
+    },
+    {
+      "value": "Lecture",
+      "label": "lecture",
+      "semanticCode": "lecture"
+    },
+    {
+      "value": "Images in Clinical Medicine",
+      "label": "images in clinical medicine",
+      "semanticCode": "images-in-clinical-medicine"
+    },
+    {
+      "value": "Clinical Department",
+      "label": "clinical department",
+      "semanticCode": "clinical-department"
+    },
+    {
+      "value": "News Items",
+      "label": "news items",
+      "semanticCode": "news-items"
+    },
+    {
+      "value": "Meteorological Record",
+      "label": "meteorological record",
+      "semanticCode": "meteorological-record"
+    },
+    {
+      "value": "Clinical Practice",
+      "label": "clinical practice",
+      "semanticCode": "clinical-practice"
+    },
+    {
+      "value": "Bibliographical Notices",
+      "label": "bibliographical notices",
+      "semanticCode": "bibliographical-notices"
+    },
+    {
+      "value": "Nonclinical Notes",
+      "label": "nonclinical notes",
+      "semanticCode": "nonclinical-notes"
+    },
+    {
+      "value": "Obituary",
+      "label": "obituary",
+      "semanticCode": "obituary"
+    },
+    {
+      "value": "Health Policy 2001",
+      "label": "health policy 2001",
+      "semanticCode": "health-policy-2001"
+    },
+    {
+      "value": "Medical Eponym",
+      "label": "medical eponym",
+      "semanticCode": "medical-eponym"
+    },
+    {
+      "value": "Health Policy Report",
+      "label": "health policy report",
+      "semanticCode": "health-policy-report"
+    },
+    {
+      "value": "Hospital Practice and Clinical Memoranda",
+      "label": "hospital practice and clinical memoranda",
+      "semanticCode": "hospital-practice-and-clinical-memoranda"
+    },
+    {
+      "value": "Hospital Reports",
+      "label": "hospital reports",
+      "semanticCode": "hospital-reports"
+    },
+    {
+      "value": "Original Communications",
+      "label": "original communications",
+      "semanticCode": "original-communications"
+    },
+    {
+      "value": "Medicine and Society",
+      "label": "medicine and society",
+      "semanticCode": "medicine-and-society"
+    },
+    {
+      "value": "Physiology in Medicine",
+      "label": "physiology in medicine",
+      "semanticCode": "physiology-in-medicine"
+    },
+    {
+      "value": "Editorials and Medical intelligence",
+      "label": "editorials and medical intelligence",
+      "semanticCode": "editorials-and-medical-intelligence"
+    },
+    {
+      "value": "This Week's Issue",
+      "label": "this week's issue",
+      "semanticCode": "this-weeks-issue"
+    },
+    {
+      "value": "Seminars in Medicine of the Beth Israel Hospital, Boston",
+      "label": "seminars in medicine of the beth israel hospital, boston",
+      "semanticCode": "seminars-in-medicine-of-the-beth-israel-hospital-boston"
+    },
+    {
+      "value": "New Hampshire Medical Society",
+      "label": "new hampshire medical society",
+      "semanticCode": "new-hampshire-medical-society"
+    },
+    {
+      "value": "Vermont State Medical Society",
+      "label": "vermont state medical society",
+      "semanticCode": "vermont-state-medical-society"
+    },
+    {
+      "value": "Connecticut Department of Health",
+      "label": "connecticut department of health",
+      "semanticCode": "connecticut-department-of-health"
+    },
+    {
+      "value": "Intelligence",
+      "label": "intelligence",
+      "semanticCode": "intelligence"
+    },
+    {
+      "value": "New Instruments",
+      "label": "new instruments",
+      "semanticCode": "new-instruments"
+    },
+    {
+      "value": "Selections from Medical Journals",
+      "label": "selections from medical journals",
+      "semanticCode": "selections-from-medical-journals"
+    },
+    {
+      "value": "Control of Communicable Diseases in Massachusetts",
+      "label": "control of communicable diseases in massachusetts",
+      "semanticCode": "control-of-communicable-diseases-in-massachusetts"
+    },
+    {
+      "value": "War Activities",
+      "label": "war activities",
+      "semanticCode": "war-activities"
+    },
+    {
+      "value": "Clinical Therapeutics",
+      "label": "clinical therapeutics",
+      "semanticCode": "clinical-therapeutics"
+    },
+    {
+      "value": "Address",
+      "label": "address",
+      "semanticCode": "address"
+    },
+    {
+      "value": "Clinical Lecture",
+      "label": "clinical lecture",
+      "semanticCode": "clinical-lecture"
+    },
+    {
+      "value": "Army Medical Intelligence",
+      "label": "army medical intelligence",
+      "semanticCode": "army-medical-intelligence"
+    },
+    {
+      "value": "Reports and Notices of Meetings",
+      "label": "reports and notices of meetings",
+      "semanticCode": "reports-and-notices-of-meetings"
+    },
+    {
+      "value": "Selected Papers",
+      "label": "selected papers",
+      "semanticCode": "selected-papers"
+    },
+    {
+      "value": "Interactive Medical Case",
+      "label": "interactive medical case",
+      "semanticCode": "interactive-medical-case"
+    },
+    {
+      "value": "Legislative Notes",
+      "label": "legislative notes",
+      "semanticCode": "legislative-notes"
+    },
+    {
+      "value": "Information for Authors",
+      "label": "information for authors",
+      "semanticCode": "information-for-authors"
+    },
+    {
+      "value": "Medical Miscellany",
+      "label": "medical miscellany",
+      "semanticCode": "medical-miscellany"
+    },
+    {
+      "value": "Mechanisms of Disease",
+      "label": "mechanisms of disease",
+      "semanticCode": "mechanisms-of-disease"
+    },
+    {
+      "value": "Clinical Memorandum",
+      "label": "clinical memorandum",
+      "semanticCode": "clinical-memorandum"
+    },
+    {
+      "value": "Health Law, Ethics, and Human Rights",
+      "label": "health law, ethics, and human rights",
+      "semanticCode": "health-law-ethics-and-human-rights"
+    },
+    {
+      "value": "PAPERS AND DISCUSSIONS OF THE SECTION OF MEDICINE",
+      "label": "papers and discussions of the section of medicine",
+      "semanticCode": "papers-and-discussions-of-the-section-of-medicine"
+    },
+    {
+      "value": "Molecular Medicine",
+      "label": "molecular medicine",
+      "semanticCode": "molecular-medicine"
+    },
+    {
+      "value": "Medicine and Public Affairs",
+      "label": "medicine and public affairs",
+      "semanticCode": "medicine-and-public-affairs"
+    },
+    {
+      "value": "Occasional Notes",
+      "label": "occasional notes",
+      "semanticCode": "occasional-notes"
+    },
+    {
+      "value": "Videos in Clinical Medicine",
+      "label": "videos in clinical medicine",
+      "semanticCode": "videos-in-linical-medicine"
+    },
+    {
+      "value": "Blue Cross–Blue Shield",
+      "label": "blue cross–blue shield",
+      "semanticCode": "blue-cross–blue-shield"
+    },
+    {
+      "value": "Clinical Note",
+      "label": "clinical note",
+      "semanticCode": "clinical-note"
+    },
+    {
+      "value": "Legal Issues in Medicine",
+      "label": "legal issues in medicine",
+      "semanticCode": "legal-issues-in-medicine"
+    },
+    {
+      "value": "Therapeutic Memoranda",
+      "label": "therapeutic memoranda",
+      "semanticCode": "therapeutic-memoranda"
+    },
+    {
+      "value": "Points of View",
+      "label": "points of view",
+      "semanticCode": "points-of-view"
+    },
+    {
+      "value": "Editorial Retrospective",
+      "label": "editorial retrospective",
+      "semanticCode": "editorial-retrospective"
+    },
+    {
+      "value": "Short Communications",
+      "label": "short communications",
+      "semanticCode": "short-communications"
+    },
+    {
+      "value": "Medical Diary of the Week",
+      "label": "medical diary of the week",
+      "semanticCode": "medical-diary-of-the-week"
+    },
+    {
+      "value": "New England Surgical Society",
+      "label": "new england surgical society",
+      "semanticCode": "new-england-surgical-society"
+    },
+    {
+      "value": "Clinical Decisions",
+      "label": "clinical decisions",
+      "semanticCode": "clinical-decisions"
+    },
+    {
+      "value": "American Medical Biography",
+      "label": "american medical biography",
+      "semanticCode": "american-medical-biography"
+    },
+    {
+      "value": "Fifty Years of Medical Progress",
+      "label": "fifty years of medical progress",
+      "semanticCode": "fifty-years-of-medical-progress"
+    },
+    {
+      "value": "The Doctor's Saddle Bag",
+      "label": "the doctor's saddle bag",
+      "semanticCode": "the-doctors-saddle-bag"
+    },
+    {
+      "value": "Case Records of the Faulkner Hospital",
+      "label": "case records of the faulkner hospital",
+      "semanticCode": "case-records-of-the-faulkner-hospital"
+    },
+    {
+      "value": "Medical History",
+      "label": "medical history",
+      "semanticCode": "medical-history"
+    },
+    {
+      "value": "Statistics in Practice",
+      "label": "statistics in practice",
+      "semanticCode": "statistics-in-practice"
+    },
+    {
+      "value": "Graduate Course in Cancer",
+      "label": "graduate course in cancer",
+      "semanticCode": "graduate-course-in-cancer"
+    },
+    {
+      "value": "Reports of Cases",
+      "label": "reports of cases",
+      "semanticCode": "reports-of-cases"
+    },
+    {
+      "value": "Miscellaneous Notices",
+      "label": "miscellaneous notices",
+      "semanticCode": "miscellaneous-notices"
+    },
+    {
+      "value": "THE MASSACHUSETTS MEDICAL SOCIETY",
+      "label": "the massachusetts medical society",
+      "semanticCode": "the-massachusetts-medical-society"
+    },
+    {
+      "value": "Random Reports",
+      "label": "random reports",
+      "semanticCode": "random-reports"
+    },
+    {
+      "value": "Therapeutic and Preventive Medicine",
+      "label": "therapeutic and preventive medicine",
+      "semanticCode": "therapeutic-and-preventive-medicine"
+    },
+    {
+      "value": "Medicolegal Abstract",
+      "label": "medicolegal abstract",
+      "semanticCode": "medicolegal-abstract"
+    },
+    {
+      "value": "Harvard Medical School",
+      "label": "harvard medical school",
+      "semanticCode": "harvard-medical-school"
+    },
+    {
+      "value": "New England Medical Council",
+      "label": "new england medical council",
+      "semanticCode": "new-england-medical-council"
+    },
+    {
+      "value": "Report of Meeting",
+      "label": "report of meeting",
+      "semanticCode": "report-of-meeting"
+    },
+    {
+      "value": "Washington Report",
+      "label": "washington report",
+      "semanticCode": "washington-report"
+    },
+    {
+      "value": "Notes and Queries",
+      "label": "notes and queries",
+      "semanticCode": "notes-and-queries"
+    },
+    {
+      "value": "Notes from the Medical Examiner",
+      "label": "notes from the medical examiner",
+      "semanticCode": "notes-from-the-medical-examiner"
+    },
+    {
+      "value": "Other Points of View",
+      "label": "other points of view",
+      "semanticCode": "other-points-of-view"
+    },
+    {
+      "value": "A Hundred Years Ago",
+      "label": "a hundred years ago",
+      "semanticCode": "a-hundred-years-ago"
+    },
+    {
+      "value": "Public-Health Rounds at the Harvard School of Public Health",
+      "label": "public-health rounds at the harvard school of public health",
+      "semanticCode": "public-health-rounds-at-the-harvard-school-of-public-health"
+    },
+    {
+      "value": "Basic Science for Clinicians",
+      "label": "basic science for clinicians",
+      "semanticCode": "basic-science-for-clinicians"
+    },
+    {
+      "value": "Boston City Hospital Staff Clinical Meeting",
+      "label": "boston city hospital staff clinical meeting",
+      "semanticCode": "boston-city-hospital-staff-clinical-meeting"
+    },
+    {
+      "value": "Monthly Notice of New Publications",
+      "label": "monthly notice of new publications",
+      "semanticCode": "monthly-notice-of-new-publications"
+    },
+    {
+      "value": "Saturday Surgical Seminar, Peter Bent Brigham Hospital",
+      "label": "saturday surgical seminar, peter bent brigham hospital",
+      "semanticCode": "saturday-surgical-seminar-peter-bent-brigham-hospital"
+    },
+    {
+      "value": "Statistics in Medicine",
+      "label": "statistics in medicine",
+      "semanticCode": "statistics-in-medicine"
+    },
+    {
+      "value": "Quality of Health Care",
+      "label": "quality of health care",
+      "semanticCode": "quality-of-health-care"
+    },
+    {
+      "value": "Retraction",
+      "label": "retraction",
+      "semanticCode": "retraction"
+    },
+    {
+      "value": "Clinical Debate",
+      "label": "clinical debate",
+      "semanticCode": "clinical-debate"
+    },
+    {
+      "value": "Reports of societies",
+      "label": "reports of societies",
+      "semanticCode": "reports-of-societies"
+    },
+    {
+      "value": "Clinicopathological Exercise, University of Kansas Medical Center",
+      "label": "clinicopathological exercise, university of kansas medical center",
+      "semanticCode": "clinicopathological-exercise-university-of-kansas-medical-center"
+    },
+    {
+      "value": "MASSACHUSETTS DEPARTMENT OF PUBLIC HEALTH",
+      "label": "massachusetts department of public health",
+      "semanticCode": "massachusetts-department-of-public-health"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "searchWithin": [
+    {
+      "label": "freeText",
+      "value": "fulltext"
+    },
+    {
+      "label": "Title",
+      "value": "title"
+    },
+    {
+      "label": "Abstract",
+      "value": "abstract"
+    },
+    {
+      "label": "All",
+      "value": "fulltext"
+    },
+    {
+      "label": "fullText",
+      "value": "fulltext"
+    },
+    {
+      "label": "all",
+      "value": "fulltext"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "broadTopic": [
+    {
+      "label": "Alternative Payment Models (APM)",
+      "value": "cat-bt-001",
+      "semanticCode": "alternative-payment-models",
+      "alias1": "Alternative Payment Models",
+      "alias2": "apm"
+    },
+    {
+      "label": "Analytics and Outcomes",
+      "value": "cat-bt-002",
+      "semanticCode": "analytics-and-outcomes",
+      "alias1": "",
+      "alias2": ""
+    },
+    {
+      "label": "Culture of Health",
+      "value": "cat-bt-003",
+      "semanticCode": "culture-of-health",
+      "alias1": "",
+      "alias2": ""
+    },
+    {
+      "label": "Health Care Leadership",
+      "value": "cat-bt-004",
+      "semanticCode": "health-care-leadership",
+      "alias1": "",
+      "alias2": ""
+    },
+    {
+      "label": "Health Technology",
+      "value": "cat-bt-005",
+      "semanticCode": "health-technology",
+      "alias1": "",
+      "alias2": ""
+    },
+    {
+      "label": "Market Landscape",
+      "value": "cat-bt-006",
+      "semanticCode": "market-landscape",
+      "alias1": "",
+      "alias2": ""
+    },
+    {
+      "label": "New Models of Care",
+      "value": "cat-bt-007",
+      "semanticCode": "new-models-of-care",
+      "alias1": "New Models Of Care",
+      "alias2": ""
+    },
+    {
+      "label": "Patient-Centered Care",
+      "value": "cat-bt-008",
+      "semanticCode": "patient-centered-care",
+      "alias1": "Patient Centered Care",
+      "alias2": ""
+    }
+  ]
+}

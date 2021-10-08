@@ -1,0 +1,32 @@
+{
+  "articleCategory": [
+    {
+      "value": "research",
+      "label": "Research"
+    },
+    {
+      "value": "review",
+      "label": "Review"
+    },
+    {
+      "value": "perspective",
+      "label": "Perspective"
+    },
+    {
+      "value": "clinical-cases",
+      "label": "Clinical Cases"
+    },
+    {
+      "value": "commentary",
+      "label": "Commentary"
+    },
+    {
+      "value": "media",
+      "label": "Media"
+    },
+    {
+      "value": "other",
+      "label": "Other"
+    }
+  ]
+}

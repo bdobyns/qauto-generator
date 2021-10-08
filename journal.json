@@ -1,0 +1,24 @@
+{
+  "journal": [
+    {
+      "label": "catalyst",
+      "value": "catalyst",
+      "alias1": ""
+    },
+    {
+      "label": "carryover",
+      "value": "carryover",
+      "alias1": ""
+    },
+    {
+      "label": "cat-non-issue",
+      "value": "cat-non-issue",
+      "alias1": ""
+    },
+    {
+      "label": "viewpoints",
+      "value": "viewpoints",
+      "alias1": ""
+    }
+  ]
+}
