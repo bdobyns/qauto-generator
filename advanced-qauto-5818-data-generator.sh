@@ -55,13 +55,13 @@ do
        do
 	# actually make a call to get the facets
 	curl -H 'accept: application/json' -H 'apikey: 2A330F24-889C-4B9D-82C9-BE891CC2D60C'  -H 'apiuser: onesearch_tests_run' -s -m 60 -X 'GET' \
-	     'https://onesearch-api.nejmgroup-qa.org/api/v1/advanced?context='$CONTEXT'&objectType='$OBJECTTYPE'&allWords='$ALLWORDS'&searchWithin='$SEARCHWITHIN'&articleType='$ARTICLETYPE'&granularTopic='$GRANULARTOPIC'&date='$DATEARG'&author='$AUTHOR'&authorAndOr='$AUTHORANDOR'&volume='$VOLUME'&page='$PAGE'&issue='$ISSUE'&journal='$JOURNAL'&showFacets='$SHOWFACETS'&startPage='$STARTPAGE'&pageLength='$PAGELENGTH'&logMsg='$LOGMSG >$TMPFILE
+	     'https://onesearch-api.nejmgroup-qa.org/api/v1/advanced?context='$CONTEXT'&objectType='$OBJECTTYPE'&allWords='$QUERY'&searchWithin='$SEARCHWITHIN'&articleType='$ARTICLETYPE'&granularTopic='$GRANULARTOPIC'&date='$DATEARG'&author='$AUTHOR'&authorAndOr='$AUTHORANDOR'&volume='$VOLUME'&page='$PAGE'&issue='$ISSUE'&journal='$JOURNAL'&showFacets='$SHOWFACETS'&startPage='$STARTPAGE'&pageLength='$PAGELENGTH'&logMsg='$LOGMSG >$TMPFILE
 
 	# ignore combinations that give us no results for the articleType / granularTopic / journal combination
 	TOTAL=$( cat $TMPFILE | jq .total | sed -e 's/"//' )
 	if [ $TOTAL == null ] ; then 
 	    echo curl -H 'accept: application/json' -H 'apikey: 2A330F24-889C-4B9D-82C9-BE891CC2D60C'  -H 'apiuser: onesearch_tests_run' -s -m 60 -X 'GET' \
-		 'https://onesearch-api.nejmgroup-qa.org/api/v1/simple?context='$CONTEXT'&objectType='$OBJECTTYPE'&allWords='$ALLWORDS'&searchWithin='$SEARCHWITHIN'&articleType='$ARTICLETYPE'&granularTopic='$GRANULARTOPIC'&date='$DATEARG'&author='$AUTHOR'&authorAndOr='$AUTHORANDOR'&volume='$VOLUME'&page='$PAGE'&issue='$ISSUE'&journal='$JOURNAL'&showFacets='$SHOWFACETS'&startPage='$STARTPAGE'&pageLength='$PAGELENGTH'&showFacets=y' >&2
+		 'https://onesearch-api.nejmgroup-qa.org/api/v1/simple?context='$CONTEXT'&objectType='$OBJECTTYPE'&allWords='$QUERY'&searchWithin='$SEARCHWITHIN'&articleType='$ARTICLETYPE'&granularTopic='$GRANULARTOPIC'&date='$DATEARG'&author='$AUTHOR'&authorAndOr='$AUTHORANDOR'&volume='$VOLUME'&page='$PAGE'&issue='$ISSUE'&journal='$JOURNAL'&showFacets='$SHOWFACETS'&startPage='$STARTPAGE'&pageLength='$PAGELENGTH'&showFacets=y' >&2
 	    cat >&2 $TMPFILE ; echo "" >&2
 	    continue
 	elif [ $TOTAL -le $MINCOUNT ] ; then
@@ -81,12 +81,12 @@ do
       cat $TMPFILE | jq .facets.broadTopic.facetValues | sed -e /count/d |  tr -d '{"[}],' | cut -d : -f 2 | sed -e '/^ *$/d' -e 's/^ //' | tr ' ' + | shuf -n $BTCOUNT | while read BROADTOPIC
       do
 	  SORTBY=$( sortBy $COUNT )
-	  echo '"'$CONTEXT'","'$OBJECTTYPE'","'$ALLWORDS'","'$SEARCHWITHIN'","'$ARTICLETYPE'","'$GRANULARTOPIC'","'$BROADTOPIC'","'$DATEARG'","'$AUTHOR'","'$AUTHORANDOR'",1,1,1,1,100,"'$SORTBY'","Y","'$JOURNAL'","short","'$LOGMSG"-no-"$COUNT"-total-"$TOTAL'"'
+	  echo '"'$CONTEXT'","'$OBJECTTYPE'","'$QUERY'","'$SEARCHWITHIN'","'$ARTICLETYPE'","'$GRANULARTOPIC'","'$BROADTOPIC'","'$DATEARG'","'$AUTHOR'","'$AUTHORANDOR'",1,1,1,1,100,"'$SORTBY'","Y","'$JOURNAL'","short","'$LOGMSG"-no-"$COUNT"-total-"$TOTAL'"'
 
 	  # also output the same line with Article since that's almost certain to work too 
 	#  if [ $ARTICLETYPE != Article ] ; then 
 	#       ARTICLETYPE=Article
-	#	echo '"'$CONTEXT'","'$OBJECTTYPE'","'$ALLWORDS'","'$SEARCHWITHIN'","'$ARTICLETYPE'","'$GRANULARTOPIC'","'$BROADTOPIC'","'$DATEARG'","'AUTHOR'","'$AUTHORANDOR'",1,1,1,1,100,"'$SORTBY'","Y","'$JOURNAL'","short","'$LOGMSG"-total-"$TOTAL'"'
+	#	echo '"'$CONTEXT'","'$OBJECTTYPE'","'$QUERY'","'$SEARCHWITHIN'","'$ARTICLETYPE'","'$GRANULARTOPIC'","'$BROADTOPIC'","'$DATEARG'","'AUTHOR'","'$AUTHORANDOR'",1,1,1,1,100,"'$SORTBY'","Y","'$JOURNAL'","short","'$LOGMSG"-total-"$TOTAL'"'
 	#  fi
       done # end of each broadTopic for a particular granularTopic
   done # journal
