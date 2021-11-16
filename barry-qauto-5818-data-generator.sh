@@ -14,22 +14,30 @@ TMPFILE=/tmp/$( basename $0 .sh).$$
 GTTEMP=/tmp/gt-$( basename $0 .sh).$$
 ENDPOINT=simple
 QNAME=query
+WITHOUT=0
+QVALUES="medicare system health care value"
+VERBOSE=0
+QUOTES=noquotes
 
 # ------ ARGUMENT PROCESSING ----------------------------------------
 
-while getopts i:h:u:k:qas opt 
+while getopts i:h:u:k:vqaswQ: opt 
 do
     case "$opt" in
 	i)  INPUTFILE="$OPTARG" ;;
 	h)  HOST="$OPTARG" ;;
 	k)  APIKEY="$OPTARG" ;;
 	u)  APIUSER="$OPTARG" ;;
-	q)  QUOTES=noquotes ;;
+	q)  QUOTES=quotes ;;
 
 	a)  ENDPOINT=advanced
 	    QNAME=allwords ;;
 	s)  ENDPOINT=simple
 	    QNAME=query ;;
+	w)  ENDPOINT=advanced
+	    QNAME=withoutTheWords ;;
+	Q)  QVALUES="$OPTARG" ;;
+	v)  VERBOSE=1;
     esac
 done
 
@@ -70,7 +78,7 @@ sortBy() {
 # ----- MAIN LOOP --------------------------------------------------
 
 # output the header row
-echo "context,objectType,query,articleType,granularTopic,broadTopic,date,startPage,pageLength,sortBy,showFacets,journal,showResult,logmsg"
+echo "context,objectType,"$QNAME",articleType,granularTopic,broadTopic,date,startPage,pageLength,sortBy,showFacets,journal,showResult,logmsg"
 
 # start of the main loop
 COUNT=0
@@ -88,9 +96,10 @@ do
 	COUNT=$[ $COUNT + 1 ]
        for DATEARG in $( shuf -e past5Years past10Years "" )
        do
-       for QUERY in $( shuf -e medicare system health care value "" )
+       for QUERY in $( shuf -e $QVALUES "" )
        do
 	# actually make a call to get the facets
+	   if [ $VERBOSE -ge 1 ] ; then echo try $ENDPOINT $GRANULARTOPIC $JOURNAL $ARTICLETYPE $DATEARG $QNAME $QUERY >&2 ; fi
 	curl -H 'accept: application/json' -H 'apikey: 2A330F24-889C-4B9D-82C9-BE891CC2D60C'  -H 'apiuser: onesearch_tests_run' -s -m 60 -X 'GET' \
 	     'https://onesearch-api.nejmgroup-qa.org/api/v1/'$ENDPOINT'?context='$CONTEXT'&objectType='$OBJECTTYPE'&'$QNAME'='$QUERY'&articleType='$ARTICLETYPE'&granularTopic='$GRANULARTOPIC'&date='$DATEARG'&journal='$JOURNAL'&showFacets=y' >$TMPFILE
 

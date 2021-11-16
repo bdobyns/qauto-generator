@@ -9,10 +9,12 @@ INPUTFILE=granularTopic.json
 QUOTES=quotes
 ENDPOINT=simple
 QNAME=query
+VERBOSE=0
+CAT=cat
 
 # ------ ARGUMENT PROCESSING ----------------------------------------
 
-while getopts i:h:u:k:qas opt 
+while getopts i:h:u:k:vqaswQ:f opt 
 do
     case "$opt" in
 	i)  INPUTFILE="$OPTARG" ;;
@@ -25,13 +27,18 @@ do
 	    QNAME=allwords ;;
 	s)  ENDPOINT=simple
 	    QNAME=query ;;
+	w)  ENDPOINT=advanced
+	    QNAME=withoutTheWords ;;
+	Q)  QVALUES="$OPTARG" ;;
+	v)  VERBOSE=1;;
+	f)  CAT="tail -f"
     esac
 done
 
 if [ -z $INPUTFILE ] ; then
     echo ERROR you must give a filename of the csv -i filename
     exit 1
-elif [ ! -e $INPUTFILE ] ; then
+elif [ $INPUTFILE != - ] && [ ! -e $INPUTFILE ] ; then
     echo ERROR "'$INPUTFILE'" does not exist so, bummer.
     exit 2
 elif [ -z $HOST ] ; then
@@ -47,7 +54,7 @@ fi
 
 # ----- MAIN LOOP --------------------------------------------------
 
-cat "$INPUTFILE" | tr '",' ' '| while read CONTEXT OBJECTTYPE QUERY ARTICLETYPE GRANULARTOPIC BROADTOPIC DATEARG STARTPAGE PAGELENGTH SORTBY SHOWFACETS JOURNAL SHOWRESULT LOGMSG
+$CAT "$INPUTFILE" | tr '",' ' '| while read CONTEXT OBJECTTYPE QUERY ARTICLETYPE GRANULARTOPIC BROADTOPIC DATEARG STARTPAGE PAGELENGTH SORTBY SHOWFACETS JOURNAL SHOWRESULT LOGMSG
 do
   if [ $COUNT -eq 0 ] ; then # skip line 0 header line
       if [ $QUOTES == quotes ] ; then
@@ -65,11 +72,11 @@ do
 		 'https://onesearch-api.nejmgroup-qa.org/api/v1/'$ENDPOINT'?context='$CONTEXT'&objectType='$OBJECTTYPE'&'$QNAME'='$QUERY'&articleType='$ARTICLETYPE'&granularTopic='$GRANULARTOPIC'&date='$DATEARG'&journal='$JOURNAL'&showFacets='$SHOWFACETS'&startPage='$STARTPAGE'&pageLength='$PAGELENGTH'&logMsg='$LOGMSG >$TMPFILE
 	    cat >&2 $TMPFILE ; echo "" >&2
 	else
-	    echo FAILED >&2 $CONTEXT $OBJECTTYPE $QUERY $ARTICLETYPE $GRANULARTOPIC $BROADTOPIC $DATEARG $STARTPAGE $PAGELENGTH $SORTBY $SHOWFACETS $JOURNAL $SHOWRESULT $LOGMSG
+	    if [ $VERBOSE -eq 1 ] ; then echo FAILED >&2 $CONTEXT $OBJECTTYPE $QUERY $ARTICLETYPE $GRANULARTOPIC $BROADTOPIC $DATEARG $STARTPAGE $PAGELENGTH $SORTBY $SHOWFACETS $JOURNAL $SHOWRESULT $LOGMSG ; fi
 	fi
 	    
     elif [ $TOTAL -eq 0 ] ; then
-	echo >&2 FAILED $CONTEXT $OBJECTTYPE $QUERY $ARTICLETYPE $GRANULARTOPIC $BROADTOPIC $DATEARG $STARTPAGE $PAGELENGTH $SORTBY $SHOWFACETS $JOURNAL $SHOWRESULT $LOGMSG
+	    if [ $VERBOSE -eq 1 ] ; then echo FAILED >&2 $CONTEXT $OBJECTTYPE $QUERY $ARTICLETYPE $GRANULARTOPIC $BROADTOPIC $DATEARG $STARTPAGE $PAGELENGTH $SORTBY $SHOWFACETS $JOURNAL $SHOWRESULT $LOGMSG ; fi
     else
       if [ $QUOTES == quotes ] ; then
 	  echo '"'$CONTEXT'","'$OBJECTTYPE'","'$QUERY'","'$ARTICLETYPE'","'$GRANULARTOPIC'","'$BROADTOPIC'","'$DATEARG'","'$STARTPAGE','$PAGELENGTH',"'$SORTBY'","'$SHOWFACETS'","'$JOURNAL'","'$SHOWRESULT'","'$LOGMSG'"'
